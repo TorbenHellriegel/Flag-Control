@@ -4,10 +4,13 @@ using UnityEngine;
 
 public class DoorController : MonoBehaviour
 {
+    private SpriteRenderer spriteRenderer;
+    public Sprite openDoor;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     // Update is called once per frame
@@ -18,6 +21,6 @@ public class DoorController : MonoBehaviour
 
     public void OpenDoor()
     {
-        //TODO open door
+        spriteRenderer.sprite = openDoor;
     }
 }

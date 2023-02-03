@@ -4,10 +4,13 @@ using UnityEngine;
 
 public class FlagController : MonoBehaviour
 {
+    private SpriteRenderer spriteRenderer;
+    public Sprite cleanFlag;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     // Update is called once per frame
@@ -18,6 +21,7 @@ public class FlagController : MonoBehaviour
 
     public void RemoveFlag()
     {
-        //TODO remove the flag from the pole
+        GetComponent<Animator>().enabled = false;
+        spriteRenderer.sprite = cleanFlag;
     }
 }

@@ -5,18 +5,23 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     [SerializeField] private int speed = 3;
+    [SerializeField] private int jumpForce = 500;
     [SerializeField] private bool canChangeGravity;
     [SerializeField] private Vector2 direction;
     [SerializeField] private string gravityDirection;
     [SerializeField] private bool hasFlag;
+    private Rigidbody2D playerRigidbody;
     public FlagController flag;
     public DoorController door;
+    public GameManager gameManager;
 
     // Start is called before the first frame update
     void Start()
     {
         flag = GameObject.Find("Flag").GetComponent<FlagController>();
         door = GameObject.Find("Door").GetComponent<DoorController>();
+        gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
+        playerRigidbody = GetComponent<Rigidbody2D>();
 
         direction = Vector2.right;
         gravityDirection = "down";
@@ -29,14 +34,16 @@ public class PlayerController : MonoBehaviour
     {
         transform.Translate(direction * Time.deltaTime * speed);
         
-        if(Input.GetKeyDown(KeyCode.W) && gravityDirection != "up" && canChangeGravity){
+        if((Input.GetKeyDown(KeyCode.W)||Input.GetKeyDown(KeyCode.UpArrow)) && gravityDirection != "up" && canChangeGravity){
             RotatePlayer(180);
             ChangeGravity("up");
+            Jump(jumpForce);
             canChangeGravity = false;
         }
-        if(Input.GetKeyDown(KeyCode.S) && gravityDirection != "down" && canChangeGravity){
+        if((Input.GetKeyDown(KeyCode.S)||Input.GetKeyDown(KeyCode.DownArrow)) && gravityDirection != "down" && canChangeGravity){
             RotatePlayer(180);
             ChangeGravity("down");
+            Jump(-jumpForce);
             canChangeGravity = false;
         }
         // if(Input.GetKeyDown(KeyCode.A)){
@@ -61,7 +68,7 @@ public class PlayerController : MonoBehaviour
 
         if (col.gameObject.tag == "Spike")
         {
-            Debug.Log("GAME OVER");//TODO
+            gameManager.GameOver();
         }
     }
 
@@ -77,7 +84,7 @@ public class PlayerController : MonoBehaviour
 
         if (col.gameObject.name == "Door" && hasFlag)
         {
-            Debug.Log("GAME WON");//TODO
+            gameManager.GameWon();
         }
     }
 
@@ -97,5 +104,10 @@ public class PlayerController : MonoBehaviour
             Physics2D.gravity = new Vector2(0,-9.8f);
             gravityDirection = "down";
         }
+    }
+
+    private void Jump(int force)
+    {
+        playerRigidbody.AddForce(new Vector2(0,force));
     }
 }
