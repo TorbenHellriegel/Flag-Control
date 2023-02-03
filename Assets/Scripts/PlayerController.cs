@@ -5,16 +5,23 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     [SerializeField] private int speed = 3;
-    public Vector2 direction;
-    public string gravityDirection;
     [SerializeField] private bool canChangeGravity;
+    [SerializeField] private Vector2 direction;
+    [SerializeField] private string gravityDirection;
+    [SerializeField] private bool hasFlag;
+    public FlagController flag;
+    public DoorController door;
 
     // Start is called before the first frame update
     void Start()
     {
+        flag = GameObject.Find("Flag").GetComponent<FlagController>();
+        door = GameObject.Find("Door").GetComponent<DoorController>();
+
         direction = Vector2.right;
         gravityDirection = "down";
         canChangeGravity = true;
+        hasFlag = false;
     }
 
     // Update is called once per frame
@@ -46,13 +53,31 @@ public class PlayerController : MonoBehaviour
         {
             RotatePlayer(0,180);
         }
+
         if (col.gameObject.tag == "Floor")
         {
             canChangeGravity = true;
         }
+
         if (col.gameObject.tag == "Spike")
         {
             Debug.Log("GAME OVER");//TODO
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D col)
+    {
+        if (col.gameObject.name == "Flag")
+        {
+            Debug.Log("Flag collected");
+            hasFlag = true;
+            flag.RemoveFlag();
+            door.OpenDoor();
+        }
+
+        if (col.gameObject.name == "Door" && hasFlag)
+        {
+            Debug.Log("GAME WON");//TODO
         }
     }
 
