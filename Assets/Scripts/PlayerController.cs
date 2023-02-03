@@ -50,6 +50,10 @@ public class PlayerController : MonoBehaviour
         {
             canChangeGravity = true;
         }
+        if (col.gameObject.tag == "Spike")
+        {
+            Debug.Log("GAME OVER");//TODO
+        }
     }
 
     private void RotatePlayer(int x=0, int y=0)
