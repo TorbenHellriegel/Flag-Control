@@ -87,7 +87,6 @@ public class PlayerController : MonoBehaviour
     {
         if (col.gameObject.name == "Flag")
         {
-            Debug.Log("Flag collected");
             hasFlag = true;
             flag.RemoveFlag();
             door.OpenDoor();
