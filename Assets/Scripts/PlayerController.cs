@@ -24,7 +24,6 @@ public class PlayerController : MonoBehaviour
         playerRigidbody = GetComponent<Rigidbody2D>();
 
         direction = Vector2.right;
-        Physics2D.gravity = new Vector2(0,-9.8f);
         gravityDirection = "down";
         canChangeGravity = true;
         hasFlag = false;
@@ -87,6 +86,7 @@ public class PlayerController : MonoBehaviour
     {
         if (col.gameObject.name == "Flag")
         {
+            Debug.Log("Flag collected");
             hasFlag = true;
             flag.RemoveFlag();
             door.OpenDoor();
@@ -94,7 +94,7 @@ public class PlayerController : MonoBehaviour
 
         if (col.gameObject.name == "Door" && hasFlag)
         {
-            gameManager.LevelClear();
+            gameManager.GameWon();
         }
     }
 
