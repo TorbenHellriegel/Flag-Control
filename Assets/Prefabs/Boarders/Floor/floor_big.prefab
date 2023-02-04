@@ -100,7 +100,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: floor_3
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3546736911464772391, guid: df8418830711ac24d93926ce426c51bc, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: df8418830711ac24d93926ce426c51bc, type: 3}
 --- !u!4 &2871638757286369789 stripped
 Transform:
@@ -175,7 +176,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7712512589695992646, guid: 2fc9a33ebd87779429248c9140f726b4, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 2fc9a33ebd87779429248c9140f726b4, type: 3}
 --- !u!4 &2126519396452323913 stripped
 Transform:
