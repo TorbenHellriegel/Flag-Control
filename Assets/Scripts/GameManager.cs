@@ -8,7 +8,7 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        Time.timeScale = 0;
     }
 
     // Update is called once per frame
@@ -30,5 +30,15 @@ public class GameManager : MonoBehaviour
     public void StartScene(string sceneName="MainMenu")
     {
         SceneManager.LoadScene(sceneName);
+    }
+
+    public void RestartScene()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
+    public void StartLevel()
+    {
+        Time.timeScale = 1;
     }
 }
