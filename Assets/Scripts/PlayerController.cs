@@ -34,15 +34,23 @@ public class PlayerController : MonoBehaviour
     {
         transform.Translate(direction * Time.deltaTime * speed);
         
-        //if((Input.GetKeyDown(KeyCode.W)||Input.GetKeyDown(KeyCode.UpArrow)) && gravityDirection != "up" && canChangeGravity){
-        if(Input.GetKeyDown(KeyCode.Space) && gravityDirection != "up" && canChangeGravity){
+        if((Input.GetKeyDown(KeyCode.W)
+            || Input.GetKeyDown(KeyCode.UpArrow)
+            || Input.GetKeyDown(KeyCode.Space))
+            && gravityDirection != "up"
+            && canChangeGravity)
+        {
             RotatePlayer(180);
             ChangeGravity("up");
             Jump(jumpForce);
             canChangeGravity = false;
         }
-        //if((Input.GetKeyDown(KeyCode.S)||Input.GetKeyDown(KeyCode.DownArrow)) && gravityDirection != "down" && canChangeGravity){
-        if(Input.GetKeyDown(KeyCode.Space) && gravityDirection != "down" && canChangeGravity){
+        if((Input.GetKeyDown(KeyCode.S)
+            || Input.GetKeyDown(KeyCode.DownArrow)
+            || Input.GetKeyDown(KeyCode.Space))
+            && gravityDirection != "down"
+            && canChangeGravity)
+        {
             RotatePlayer(180);
             ChangeGravity("down");
             Jump(-jumpForce);
