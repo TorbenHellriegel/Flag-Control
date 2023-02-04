@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 2753542571570195733}
   - component: {fileID: 2447100144440302125}
   - component: {fileID: 2696562356984545104}
+  - component: {fileID: 5335843872720043229}
   m_Layer: 5
   m_Name: ScreenButton
   m_TagString: Untagged
@@ -121,9 +122,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: StartLevel
+      - m_Target: {fileID: 703298052952598545}
+        m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
+        m_MethodName: gameStart
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -145,6 +146,82 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &5335843872720043229
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1903637404482878152}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae9513c365d37b444a8b626990a8bc98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameStartet: 0
+  speed: 3
+  jumpForce: 500
+  canChangeGravity: 0
+  direction: {x: 0, y: 0}
+  gravityDirection: 
+  hasFlag: 0
+  flag: {fileID: 0}
+  door: {fileID: 0}
+  gameManager: {fileID: 0}
+--- !u!1 &3711949846113783146
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7530151169472432919}
+  - component: {fileID: 703298052952598545}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7530151169472432919
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3711949846113783146}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 684.73914, y: 279.64957, z: 2.715192}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6629566348699063057}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &703298052952598545
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3711949846113783146}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae9513c365d37b444a8b626990a8bc98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameStartet: 0
+  speed: 3
+  jumpForce: 500
+  canChangeGravity: 0
+  direction: {x: 0, y: 0}
+  gravityDirection: 
+  hasFlag: 0
+  flag: {fileID: 0}
+  door: {fileID: 0}
+  gameManager: {fileID: 0}
 --- !u!1 &6629566348300946193
 GameObject:
   m_ObjectHideFlags: 0
@@ -758,6 +835,7 @@ Transform:
   - {fileID: 6629566350284593359}
   - {fileID: 6629566349754272692}
   - {fileID: 6629566348300946190}
+  - {fileID: 7530151169472432919}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

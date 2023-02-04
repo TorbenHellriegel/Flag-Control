@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    [SerializeField] public bool gameStartet;
     [SerializeField] private int speed = 3;
     [SerializeField] private int jumpForce = 500;
     [SerializeField] private bool canChangeGravity;
@@ -14,6 +15,7 @@ public class PlayerController : MonoBehaviour
     public FlagController flag;
     public DoorController door;
     public GameManager gameManager;
+    
 
     // Start is called before the first frame update
     void Start()
@@ -29,7 +31,7 @@ public class PlayerController : MonoBehaviour
         canChangeGravity = false;
         hasFlag = false;
     }
-
+    
     // Update is called once per frame
     void Update()
     {
@@ -39,7 +41,8 @@ public class PlayerController : MonoBehaviour
             || Input.GetKeyDown(KeyCode.UpArrow)
             || Input.GetKeyDown(KeyCode.Space))
             && gravityDirection != "up"
-            && canChangeGravity)
+            && canChangeGravity
+            && gameStartet)
         {
             RotatePlayer(180);
             ChangeGravity("up");
@@ -50,7 +53,8 @@ public class PlayerController : MonoBehaviour
             || Input.GetKeyDown(KeyCode.DownArrow)
             || Input.GetKeyDown(KeyCode.Space))
             && gravityDirection != "down"
-            && canChangeGravity)
+            && canChangeGravity
+            && gameStartet)
         {
             RotatePlayer(180);
             ChangeGravity("down");
@@ -65,12 +69,15 @@ public class PlayerController : MonoBehaviour
         // }
     }
 
+
     private void OnCollisionEnter2D(Collision2D col)
     {
         if (col.gameObject.tag == "Wall")
         {
             RotatePlayer(0,180);
         }
+
+        
 
         if (col.gameObject.tag == "Floor")
         {
@@ -119,5 +126,11 @@ public class PlayerController : MonoBehaviour
     private void Jump(int force)
     {
         playerRigidbody.AddForce(new Vector2(0,force));
+    }
+
+    public void gameStart()
+    {
+        Debug.Log("gameStart");
+        gameStartet = true;
     }
 }
