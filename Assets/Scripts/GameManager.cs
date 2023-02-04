@@ -5,10 +5,13 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
+    [SerializeField] private GameObject gameOverScreen;
+    [SerializeField] private GameObject levelClearScreen;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        Time.timeScale = 0;
     }
 
     // Update is called once per frame
@@ -19,16 +22,30 @@ public class GameManager : MonoBehaviour
 
     public void GameOver()
     {
-        Debug.Log("Game Over");
+        Time.timeScale = 0;
+        gameOverScreen.SetActive(true);
     }
 
-    public void GameWon()
+    public void LevelClear()
     {
-        Debug.Log("Game Won");
+        Time.timeScale = 0;
+        levelClearScreen.SetActive(true);
     }
 
     public void StartScene(string sceneName="MainMenu")
     {
+        Time.timeScale = 1;
         SceneManager.LoadScene(sceneName);
+    }
+
+    public void RestartScene()
+    {
+        Time.timeScale = 1;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
+    public void StartLevel()
+    {
+        Time.timeScale = 1;
     }
 }
