@@ -147,6 +147,11 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: StartScene
       objectReference: {fileID: 0}
+    - target: {fileID: 6629566348667322505, guid: 8e5b6aef395530347b03451fc3615faf,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: MainMenu
+      objectReference: {fileID: 0}
     - target: {fileID: 6629566348699063056, guid: 8e5b6aef395530347b03451fc3615faf,
         type: 3}
       propertyPath: m_Name
@@ -465,6 +470,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Door
+      objectReference: {fileID: 0}
+    - target: {fileID: 3083387307241013616, guid: 81156b40bf6bff3409fe91628a8a0089,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3083387307241013616, guid: 81156b40bf6bff3409fe91628a8a0089,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3083387307241013616, guid: 81156b40bf6bff3409fe91628a8a0089,
+        type: 3}
+      propertyPath: m_Offset.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3083387307241013616, guid: 81156b40bf6bff3409fe91628a8a0089,
+        type: 3}
+      propertyPath: m_Offset.y
+      value: -0.2
       objectReference: {fileID: 0}
     - target: {fileID: 3083387307241013617, guid: 81156b40bf6bff3409fe91628a8a0089,
         type: 3}
