@@ -26,7 +26,7 @@ public class PlayerController : MonoBehaviour
         direction = Vector2.right;
         Physics2D.gravity = new Vector2(0,-9.8f);
         gravityDirection = "down";
-        canChangeGravity = true;
+        canChangeGravity = false;
         hasFlag = false;
     }
 
