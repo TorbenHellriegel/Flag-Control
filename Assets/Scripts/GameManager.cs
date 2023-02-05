@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
@@ -21,6 +22,12 @@ public class GameManager : MonoBehaviour
         }
 
         audioSource = GetComponent<AudioSource>();
+
+        if (PlayerPrefs.GetInt("audio", 0)==0) {
+            audioSource.mute = true;
+        }else{
+            audioSource.mute = false;
+        }
     }
 
     // Update is called once per frame
@@ -67,6 +74,11 @@ public class GameManager : MonoBehaviour
     public void toogleAudio()
     {
         audioSource.mute = !audioSource.mute;
+        if (audioSource.mute) {
+            PlayerPrefs.SetInt("audio", 0);
+        }else{
+            PlayerPrefs.SetInt("audio", 1);
+        }
     }
 
     public void SetSelectedCharacter(int characterNum)

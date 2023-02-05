@@ -558,6 +558,12 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 289456356020654576}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &8324058461394680609 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8611062896821316305, guid: 8e5b6aef395530347b03451fc3615faf,
+    type: 3}
+  m_PrefabInstance: {fileID: 289456356020654576}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &3534424544062468616
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -732,6 +738,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1463667039647687173, guid: fb27fe24000e0f24d902f322f7b5d26f,
+        type: 3}
+      propertyPath: toggle
+      value: 
+      objectReference: {fileID: 8324058461394680609}
+    - target: {fileID: 1463667039647687173, guid: fb27fe24000e0f24d902f322f7b5d26f,
+        type: 3}
+      propertyPath: toggleGO
+      value: 
+      objectReference: {fileID: 8324058461394680609}
     - target: {fileID: 1463667039647687173, guid: fb27fe24000e0f24d902f322f7b5d26f,
         type: 3}
       propertyPath: muteMusic
