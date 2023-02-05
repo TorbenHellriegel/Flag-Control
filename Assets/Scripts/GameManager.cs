@@ -39,11 +39,12 @@ public class GameManager : MonoBehaviour
         levelClearScreen.SetActive(true);
     }
 
-    public void StartScene(string sceneName="MainMenu")
+    public void StartScene(string sceneName = "MainMenu")
     {
         Time.timeScale = 1;
         SceneManager.LoadScene(sceneName);
     }
+   
 
     public void RestartScene()
     {
