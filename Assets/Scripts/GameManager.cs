@@ -12,7 +12,8 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        if(SceneManager.GetActiveScene().name == "MainMenu"){
+        if(SceneManager.GetActiveScene().name == "MainMenu"
+            || SceneManager.GetActiveScene().name == "Credits"){
             Time.timeScale = 1;
         }else{
             Time.timeScale = 0;
