@@ -7,6 +7,7 @@ public class GameManager : MonoBehaviour
 {
     [SerializeField] private GameObject gameOverScreen;
     [SerializeField] private GameObject levelClearScreen;
+    private AudioSource audioSource;
 
     // Start is called before the first frame update
     void Start()
@@ -16,6 +17,7 @@ public class GameManager : MonoBehaviour
         }else{
             Time.timeScale = 0;
         }
+        audioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -56,5 +58,10 @@ public class GameManager : MonoBehaviour
     {
         Debug.Log("Quit");
         Application.Quit();
+    }
+
+    public void toogleAudio()
+    {
+        audioSource.mute = !audioSource.mute;
     }
 }
