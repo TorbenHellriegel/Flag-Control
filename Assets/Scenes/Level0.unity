@@ -1344,6 +1344,16 @@ PrefabInstance:
       propertyPath: m_Volume
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 565489001434111711, guid: 4c32b742cca4902489233b28e270fca1,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 51.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 565489001434111711, guid: 4c32b742cca4902489233b28e270fca1,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 23.6
+      objectReference: {fileID: 0}
     - target: {fileID: 2001471865933543679, guid: 4c32b742cca4902489233b28e270fca1,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4377,8 +4387,10 @@ EdgeCollider2D:
   - {x: -8.446186, y: -6.287285}
   - {x: -4.483405, y: -6.300916}
   - {x: -1.3764677, y: -5.264428}
-  - {x: -1.3720925, y: -1.5344669}
-  - {x: -0.6891872, y: -1.539378}
+  - {x: -1.3362397, y: -1.6420591}
+  - {x: -1.4963537, y: -1.5437865}
+  - {x: -0.533861, y: -1.5455911}
+  - {x: -0.6889409, y: -1.6227475}
   - {x: -0.6781973, y: -5.258847}
   - {x: 2.4978225, y: -6.3139462}
   - {x: 5.910627, y: -6.2931147}
