@@ -66,4 +66,9 @@ public class GameManager : MonoBehaviour
     {
         audioSource.mute = !audioSource.mute;
     }
+
+    public void SetSelectedCharacter(int characterNum)
+    {
+        PlayerPrefs.SetInt("character", characterNum);
+    }
 }
