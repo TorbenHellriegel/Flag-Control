@@ -1148,6 +1148,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9104774471092169705, guid: a32b19ac11ae66643b9f9287230e8bff,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 6.6901674
+      objectReference: {fileID: 0}
+    - target: {fileID: 9104774471092169705, guid: a32b19ac11ae66643b9f9287230e8bff,
+        type: 3}
+      propertyPath: m_Offset.y
+      value: 2.1129675
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a32b19ac11ae66643b9f9287230e8bff, type: 3}
 --- !u!4 &274144579 stripped
@@ -2405,6 +2415,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9104774471092169705, guid: a32b19ac11ae66643b9f9287230e8bff,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a32b19ac11ae66643b9f9287230e8bff, type: 3}
 --- !u!4 &593069370 stripped
@@ -2589,6 +2604,11 @@ PrefabInstance:
     - target: {fileID: 4055303278239293800, guid: a32b19ac11ae66643b9f9287230e8bff,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9104774471092169705, guid: a32b19ac11ae66643b9f9287230e8bff,
+        type: 3}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -5348,6 +5368,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9104774471092169705, guid: a32b19ac11ae66643b9f9287230e8bff,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 6.058782
+      objectReference: {fileID: 0}
+    - target: {fileID: 9104774471092169705, guid: a32b19ac11ae66643b9f9287230e8bff,
+        type: 3}
+      propertyPath: m_Offset.y
+      value: -1.2312062
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a32b19ac11ae66643b9f9287230e8bff, type: 3}
 --- !u!4 &1452751338 stripped
@@ -6926,7 +6956,7 @@ PrefabInstance:
     - target: {fileID: 2935440241031088265, guid: ac74eee845c06ab48901c4228d158661,
         type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2935440241031088265, guid: ac74eee845c06ab48901c4228d158661,
         type: 3}
